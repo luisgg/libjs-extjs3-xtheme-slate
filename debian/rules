@@ -5,12 +5,13 @@
 clean:
 	dh_testdir
 	dh_testroot
-	find . -maxdepth 1 -not -iname "debian" -not -iname "*.zip" -not -name ".*" -exec rm -r '{}' \;
+	#find . -maxdepth 1 -not -iname "debian" -not -iname "*.zip" -not -name ".*" -exec rm -r '{}' \;
+	rm -fr xtheme-slate
 	dh_clean
 
 extract: extract-stamp
 extract-stamp:
-	unzip $(CURDIR)/../sources/xtheme-slate-3.1.1.zip
+	unzip /usr/share/omv-extra-sources/sources/xtheme-slate-3.1.1.zip -C xtheme-slate
 	touch extract-stamp
 
 configure: configure-stamp
