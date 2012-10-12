@@ -11,7 +11,7 @@ clean:
 
 extract: extract-stamp
 extract-stamp:
-	unzip /usr/share/omv-extra-sources/sources/xtheme-slate-3.1.1.zip -C xtheme-slate
+	unzip -d xtheme-slate /usr/share/omv-extra-sources/sources/xtheme-slate-3.1.1.zip
 	touch extract-stamp
 
 configure: configure-stamp
